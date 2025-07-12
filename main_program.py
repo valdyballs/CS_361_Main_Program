@@ -32,6 +32,21 @@ class HomeBuyerCLI:
         """
         print("\n ---Location Information ---")
 
+  
+        # 1 Where do they want to live
+
+        # while True
+        print("We are going to ask you the name of the city you wish to live followed by the state")
+        city = input("Enter City: ").strip()
+        state = input("Enter State (exL OR, WA, CA): ").strip()
+
+        if not city or not state:
+            print("Error: City and State must be populated. Please try agein")
+            # continue
+
+        #  2 Call microservice 
+
+
 # test functions as we go :)
 if __name__ =="__main__":
     cli = HomeBuyerCLI()
