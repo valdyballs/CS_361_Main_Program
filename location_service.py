@@ -38,6 +38,17 @@ def validate_state_code(state):
     letters (example WA not WAA) and must a valid state (in "valid_states)
 
     """
+    state_upper = state.strip().upper()
+
+    if len(state_upper) != 2:
+        return False, "State must be 2-letter abbreviation"
+    
+    if state_upper not in VALID_STATES:
+        return False, f"'{state}' is not a valid abbreviation"
+    
+    return True, None
+
 
 print(validate_city_name("Seattle"))
+print(validate_state_code("WA"))
 
